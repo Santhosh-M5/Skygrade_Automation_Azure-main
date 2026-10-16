@@ -1,0 +1,72 @@
+import { test, expect } from '@playwright/test';
+
+test.use({
+  ignoreHTTPSErrors: true
+
+});
+
+test('test', async ({ page }) => {
+  test.setTimeout(60000);
+  await page.goto('https://azure-mt.skygrade.internal/');
+  const page1Promise = page.waitForEvent('popup');
+  await page.getByRole('listitem').filter({ hasText: 'KeycloakSign in using' }).getByRole('button').click();
+  const page1 = await page1Promise;
+  await page1.getByRole('textbox', { name: 'Password' }).click();
+  await page1.getByRole('textbox', { name: 'Password' }).fill('Skygrade@123');
+  await page1.getByRole('button', { name: 'Sign In' }).click();
+  await page.getByRole('textbox', { name: 'Search' }).click();
+  await page.getByRole('textbox', { name: 'Search' }).fill('qatest');
+  await page.getByText('View Apps').click();
+  await page.getByRole('button', { name: 'deploytest2' }).click();
+  await page.getByRole('button', { name: 'Deploy Deploy' }).click();
+  await expect(page.getByRole('button', { name: 'Create Pipeline' })).toBeVisible();
+  await page.getByRole('button', { name: 'Create Pipeline' }).click();
+  await expect(page.getByRole('heading', { name: 'Create a new component' })).toBeVisible();
+  await expect(page.getByRole('main')).toContainText('Azure CD pipeline using Github Actions');
+  await page.getByTestId('template-card-actions--create').first().click();
+  await expect(page.getByTestId('info-card-subheader').getByRole('paragraph')).toContainText('Create an Azure CD Pipeline using Github Actions for a project');
+  await page.getByRole('textbox', { name: 'Azure Location' }).click();
+  await page.getByRole('textbox', { name: 'Azure Location' }).fill('eastus');
+  await page.getByRole('textbox', { name: 'Branch Name' }).click();
+  await page.getByRole('textbox', { name: 'Branch Name' }).fill('main');
+  await page.getByRole('textbox', { name: 'App Name' }).click();
+  await page.getByRole('textbox', { name: 'App Name' }).fill('deploytest2');
+  await page.getByRole('textbox', { name: 'Image Name' }).click();
+  await page.getByRole('textbox', { name: 'Image Name' }).fill('crskygrade.azurecr.io/deploytest2');
+  await page.getByRole('textbox', { name: 'Runner Label' }).click();
+  await page.getByRole('textbox', { name: 'Runner Label' }).fill('arc-runner-set-deploytest2');
+  await page.getByRole('textbox', { name: 'Namespace Name' }).click();
+  await page.getByRole('textbox', { name: 'Namespace Name' }).fill('skygrade');
+  await page.getByRole('textbox', { name: 'Cluster Name' }).click();
+  //await page.getByRole('textbox', { name: 'Cluster Name' }).click();
+  //await page.getByRole('textbox', { name: 'Cluster Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Cluster Name' }).fill('AKS');
+  //await page.getByRole('textbox', { name: 'Cluster Name' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Cluster Name' }).fill('AKS-skygrade-dev');
+  await page.getByRole('textbox', { name: 'Storage Account Name' }).click();
+  await page.getByRole('textbox', { name: 'Storage Account Name' }).fill('strgskygradedev');
+  await page.getByRole('textbox', { name: 'Container Name' }).click();
+  await page.getByRole('textbox', { name: 'Container Name' }).fill('skygrade-pipeline');
+  await page.getByRole('textbox', { name: 'Managed Identity Client ID' }).click();
+  await page.getByRole('textbox', { name: 'Managed Identity Client ID' }).fill('f0cb6743-ac87-40c1-84c2-ffb46596fc71');
+  await page.getByRole('textbox', { name: 'Resource Group Name' }).click();
+  await page.getByRole('textbox', { name: 'Resource Group Name' }).fill('RG-skygrade');
+  await expect(page.getByRole('button', { name: 'Review' })).toBeVisible();
+  await page.getByRole('button', { name: 'Review' }).click();
+  await expect(page.getByRole('button', { name: 'Back' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Create' })).toBeVisible();
+  await page.getByRole('button', { name: 'Create' }).click();
+  await page.waitForTimeout(7000);
+  await page.getByRole('button', { name: 'Modernization' }).click();
+  await page.getByRole('link', { name: 'App Modernization' }).click();
+  await page.getByRole('textbox', { name: 'Search' }).click();
+  await page.getByRole('textbox', { name: 'Search' }).fill('deploytest2');
+  await page.getByText('View Apps').click();
+  await page.getByRole('button', { name: 'deploytest2' }).click();
+  await page.getByRole('button', { name: 'Deploy Deploy' }).click();
+  //await page.getByRole('button', { name: 'Deploy Deploy' }).click();
+  await expect(page.getByText('skygrade-deploytest2-ci')).toBeVisible();
+  await expect(page.getByText('skygrade-deploytest2-cd-pipeline-dev')).toBeVisible();
+  await expect(page.getByText('skygrade-deploytest2-cd-pipeline-qa')).toBeVisible();
+  await expect(page.getByText('skygrade-deploytest2-cd-pipeline-prod')).toBeVisible();
+});

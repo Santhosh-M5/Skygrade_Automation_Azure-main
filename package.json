@@ -1,0 +1,50 @@
+{
+  "name": "skygrade-automation-azure",
+  "version": "1.0.0",
+  "description": "Skygrade Azure - Cucumber + Playwright automation (no POM)",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "cross-env HEADLESS=false cucumber-js",
+    "test:TC_SG_AZ_001_login": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @login",
+    "test:TC_SG_AZ_002_portfolio": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @portfolio",
+    "test:TC_SG_AZ_003_cluster": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @onboard",
+    "test:TC_SG_AZ_004_cloudprovisioning": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @cloudprovisioning",
+    "test:TC_SG_AZ_005_rbac": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @rbac",
+    "test:TC_SG_AZ_006_cloudFieldValidation": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @azure-field-validation",
+    "test:TC_SG_AZ_007_CloudFlow": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @cloud-flow",
+    "test:TC_SG_AZ_009_Modernizationtools": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @modernizationtools",
+    "test:TC_SG_AZ_013_023_Analysistab": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @analysiscomparison",
+    "test:TC_SG_AZ_014_plantab": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @plantab",
+    "test:TC_SG_AZ_015_024_Infraeng": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @infraeng",
+    "test:TC_SG_AZ_016_025_AppEngMTM": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @appengMTM",
+    "test:TC_SG_AZ_017_025_LiftandShift": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @liftandshift",
+    "test:TC_SG_AZ_018_Containerizeapp": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @containerize",
+    "test:TC_SG_AZ_018_Dataeng": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @data-eng",
+    "test:TC_SG_AZ_019_Deploytab": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @pipeline",
+    "test:TC_SG_AZ_020_021_022_Cloudops": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @cloudops",
+    "test:Clusterdetails": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @cluster-analysis",
+    "test:dependencymapping": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @dependencymapping",
+    "test:TC_SG_AZ_030_Rearchitect_NonMainframe": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @rearchitect",
+    "test:TC_SG_AZ_030_Refactor_NonMainframe": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @refactor",
+    "test:TC_SG_AZ_031_Rehost_NonMainframe": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @rehost",
+    "test:TC_SG_AZ_033_CovertRehost_Rearchitect": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @rehostrearchitect",
+    "test:TC_SG_AZ_032_Retire_Rebuild_Nonmainframe": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @retire",
+    "test:mainframe-e2e": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js --tags @mainframe",
+    "test:TC_SG_AZ_034_mainframe_day1": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js features/TC_SG_AZ_034_mainframe_e2e.feature --name \"Day 1 - Mainframe project creation, analysis, and BRE trigger\"",
+    "test:TC_SG_AZ_034_mainframe_day2": "cross-env SHARE_SESSION=true HEADLESS=false cucumber-js features/TC_SG_AZ_034_mainframe_e2e.feature --name \"Day 2 - Resume saved run, verify BRE completion, and continue to data engineering\"",
+    
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:regression": "cucumber-js --tags @regression",
+    "dry-run": "cucumber-js --dry-run"
+  },
+  "keywords": ["cucumber", "playwright", "bdd", "skygrade", "azure"],
+  "author": "Sivasankari, Santhosh",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "^1.42.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
+  }
+}

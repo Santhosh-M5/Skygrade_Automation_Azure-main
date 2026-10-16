@@ -1,0 +1,6 @@
+{
+  "app": { "search": "EndToEndTest", "name": "NonMainframe", "viewAppsIndex": 0 },
+  "observability": { "key": "ticketbooking", "value": "engg" },
+  "security": { "tags": ["TicketBooking", "TicketBooking", "Demo"] },
+  "finops": { "app": "fundtransfer", "unit": "CorporateLendingSuite" }
+}

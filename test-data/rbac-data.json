@@ -1,0 +1,40 @@
+{
+  "appUrl": "https://azure-mt.skygrade.internal",
+  "users": {
+    "skygrade-admin": {
+      "username": "skygrade-admin",
+      "password": "Skygrade@123",
+      "role": "Admin",
+      "group": "skygrade-admin",
+      "email": "skygrade-admin@cognizant.com"
+    },
+    "infra-architect": {
+      "username": "infra-architect",
+      "password": "Skygrade@123",
+      "role": "Infra Architect",
+      "group": "infra-architect",
+      "email": "infra-architect@cognizant.com"
+    },
+    "infra-developer": {
+      "username": "infra-developer",
+      "password": "Skygrade@123",
+      "role": "Infra Developer",
+      "group": "infra-developer",
+      "email": "infra-developer@cognizant.com"
+    },
+    "application-architect": {
+      "username": "application-architect",
+      "password": "Skygrade@123",
+      "role": "Application Architect",
+      "group": "application-architect",
+      "email": "application-architect@cognizant.com"
+    },
+    "application-developer": {
+      "username": "application-developer",
+      "password": "Skygrade@123",
+      "role": "Application Developer",
+      "group": "application-developer",
+      "email": "application-developer@cognizant.com"
+    }
+  }
+}

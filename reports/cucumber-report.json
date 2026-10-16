@@ -1,0 +1,271 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "modernization-settings-tool-enable/disable-propagation;disable-observability,-security,-and-finops-tools-and-verify-disabled-state-on-the-app,-then-re-enable-and-verify-enabled-state",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Disable Observability, Security, and FinOps tools and verify disabled state on the app, then re-enable and verify enabled state",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1034146499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I am logged in as \"skygrade-admin\"",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_001_login.spec.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2516932999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I navigate to Modernization Settings",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:277"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1121354899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I open the Observability tool section and ensure its toggle is off",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:293"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 702734400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I open the Security tool section and ensure its toggle is off",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:302"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 715587199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I open the FinOps tool section and ensure its toggle is off",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:311"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 747579600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I navigate to the target application's Cloud Ops section",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:323"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18183423499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "the Observability tab should show it is not enabled",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:361"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 364097300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the Security tab should show it is not enabled",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:372"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 359458700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the FinOps tab should show it is not enabled",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:383"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 435017599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I navigate back to Modernization Settings",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:397"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 341926599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I turn the Observability tool back on",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:406"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 720840500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I turn the Security tool back on",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:414"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 719890699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "I turn the FinOps tool back on",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:422"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 712696600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "I navigate to the target application again",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:433"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3075138800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "the Observability tab should show application log details",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 846743900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "the Security tab should show cloud security alerts",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:474"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1735052999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "the FinOps tab should show Fin Ops details",
+            "match": {
+              "location": "features\\step-definitions\\TC_SG_AZ_009_Modernizationtools.spec.js:482"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 389374100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@modernizationtools",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "modernization-settings-tool-enable/disable-propagation",
+    "line": 29,
+    "keyword": "Feature",
+    "name": "Modernization Settings tool enable/disable propagation",
+    "tags": [
+      {
+        "name": "@modernizationtools",
+        "line": 28
+      }
+    ],
+    "uri": "features\\TC_SG_AZ_009_Modernizationtools.feature"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "account": {
+    "name": "CloudAccount1",
+    "id":   "123984378473",
+    "arn":  "arn:aws:codestar-connections:us-east-1:123456789012:connection/9f1c2d3e-4a5b-678c-9d0e-1f2a3b4c5d6e"
+  },
+  "cluster": { "region": "ap-east-1" },
+  "duplicateAccountId": "123984378473",
+  "editPlan": { "search": "endtoendtest", "app": "NMFrehost" },
+  "azure": {
+    "account": {
+      "name": "AzureAccount1",
+      "tenantId":          "9a8b7c6d-5e4f-3a2b-1c0d-abcdef123456",
+      "subscriptionId":    "3f5c2a91-7b6d-4d2e-9c4f-1a2b3c4d5e68",
+      "serviceConnection": "skygrade-azure-service-conn"
+    },
+    "region": "australiaeast"
+  }
+}
